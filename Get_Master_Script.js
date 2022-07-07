@@ -32,7 +32,7 @@ function delay(time) {
     await page.click('.ng-star-inserted > #slide > .login-form > .ng-dirty > .login-btn')
     await page._client().send('Page.setDownloadBehavior', {behavior: 'allow', downloadPath: downloadPath})
 
-    await page.waitForTimeout(9000)
+    await page.waitForTimeout(20000)
     // await delay(4000);
     await page.evaluate(() => {
             function download(content, fileName, contentType) {
@@ -44,6 +44,9 @@ function delay(time) {
             }
             download(localStorage.masterScript, 'masterScript.json', 'text/plain');
             download(localStorage.rawMS, 'rawMS.json', 'text/plain');
+            download(localStorage.masterScriptVersion, 'masterScriptVersion.json', 'text/plain');
+            download(localStorage.marketTimings, 'marketTimings.json', 'text/plain');
+            download(localStorage.lastExpiry, 'lastExpiry.json', 'text/plain');
         })
     // await page.waitForSelector('#profileMenuBtn')
     // await page.click('#profileMenuBtn')
@@ -54,7 +57,7 @@ function delay(time) {
     // await page.waitForSelector('#mat-menu-panel-0 > div > button:nth-child(9)')
     // await page.click('#mat-menu-panel-0 > div > button:nth-child(9)')
 
-    await page.waitForTimeout(1000)
+    await page.waitForTimeout(10000)
     await browser.close()
 })()
 
