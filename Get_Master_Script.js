@@ -46,7 +46,7 @@ function delay(time) {
             download(localStorage.rawMS, 'rawMS.json', 'text/plain');
             download(localStorage.masterScriptVersion, 'masterScriptVersion.json', 'text/plain');
             download(localStorage.marketTimings, 'marketTimings.json', 'text/plain');
-            download(localStorage.lastExpiry, 'lastExpiry.json', 'text/plain');
+            // download(localStorage.lastExpiry, 'lastExpiry.json', 'text/plain');
         })
     // await page.waitForSelector('#profileMenuBtn')
     // await page.click('#profileMenuBtn')
