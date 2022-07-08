@@ -19,7 +19,7 @@ function delay(time) {
     // })
     // const browser = await puppeteer.launch()
     const page = await browser.newPage()
-    const context = await browser.CreateIncognitoBrowserContextAsync();
+    const context = await browser.CreateIncognitoBrowserContext();
     const page = await context.newPage();
     console.log(browser.defaultBrowserContext().isIncognito())
     await page.goto('https://web.quantsapp.com/signin')
