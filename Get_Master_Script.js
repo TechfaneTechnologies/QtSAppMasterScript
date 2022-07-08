@@ -11,16 +11,17 @@ function delay(time) {
     const downloadPath = path.resolve('./')
     // console.log(downloadPath)
     const puppeteer = require('puppeteer')
-    const browser = await puppeteer.launch({
-        headless: false,
-        args: [
-            '--incognito',
-        ],
-    })
+    // const browser = await puppeteer.launch({
+    //     headless: false,
+    //     args: [
+    //         '--incognito',
+    //     ],
+    // })
+    // const browser = await puppeteer.launch()
+    const page = await browser.newPage()
     const context = await browser.CreateIncognitoBrowserContextAsync();
     const page = await context.newPage();
-    // const browser = await puppeteer.launch()
-    // const page = await browser.newPage()
+    console.log(browser.defaultBrowserContext().isIncognito())
     await page.goto('https://web.quantsapp.com/signin')
 
     await page.setViewport({ width: 1517, height: 773 })
