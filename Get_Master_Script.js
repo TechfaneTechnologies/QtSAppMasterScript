@@ -18,7 +18,7 @@ function delay(time) {
     //     ],
     // })
     // const page = await browser.newPage()
-    const browser = await puppeteer.launch({headless: false})
+    const browser = await puppeteer.launch({headless: true})
     const context = await await browser.createIncognitoBrowserContext()
     const page = await context.newPage()
     console.log(browser.defaultBrowserContext().isIncognito())
@@ -56,20 +56,20 @@ function delay(time) {
             download(localStorage.marketTimings, 'marketTimings.json', 'text/plain');
             // download(localStorage.lastExpiry, 'lastExpiry.json', 'text/plain');
         })
-    await page.waitForSelector('#profileMenuBtn')
-    await page.click('#profileMenuBtn')
+    // await page.waitForSelector('#profileMenuBtn')
+    // await page.click('#profileMenuBtn')
 
-    await page.waitForSelector('#mat-menu-panel-0 > div')
-    await page.click('#mat-menu-panel-0 > div')
+    // await page.waitForSelector('#mat-menu-panel-0 > div')
+    // await page.click('#mat-menu-panel-0 > div')
 
-    await page.waitForSelector('#mat-menu-panel-0 > div > button:nth-child(9)')
-    await page.click('#mat-menu-panel-0 > div > button:nth-child(9)')
+    // await page.waitForSelector('#mat-menu-panel-0 > div > button:nth-child(9)')
+    // await page.click('#mat-menu-panel-0 > div > button:nth-child(9)')
 
-    await page.waitForSelector('#mat-dialog-0')
-    await page.click('#mat-dialog-0')
+    // await page.waitForSelector('#mat-dialog-0')
+    // await page.click('#mat-dialog-0')
 
-    await page.waitForSelector('#mat-dialog-0 > app-common-dialog > div > div:nth-child(1) > div:nth-child(3) > button:nth-child(1)')
-    await page.click('#mat-dialog-0 > app-common-dialog > div > div:nth-child(1) > div:nth-child(3) > button:nth-child(1)')
+    // await page.waitForSelector('#mat-dialog-0 > app-common-dialog > div > div:nth-child(1) > div:nth-child(3) > button:nth-child(1)')
+    // await page.click('#mat-dialog-0 > app-common-dialog > div > div:nth-child(1) > div:nth-child(3) > button:nth-child(1)')
 
     await page.waitForTimeout(10000)
     // await browser.closeAsync()
