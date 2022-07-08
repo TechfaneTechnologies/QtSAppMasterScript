@@ -11,8 +11,8 @@ function delay(time) {
     const downloadPath = path.resolve('./')
     // console.log(downloadPath)
     const puppeteer = require('puppeteer')
-    // const browser = await puppeteer.launch({headless: false})
-    const browser = await puppeteer.launch()
+    const browser = await puppeteer.launch({headless: false})
+    // const browser = await puppeteer.launch()
     const page = await browser.newPage()
     await page.goto('https://web.quantsapp.com/signin')
 
