@@ -72,6 +72,6 @@ function delay(time) {
     // await page.click('#mat-dialog-0 > app-common-dialog > div > div:nth-child(1) > div:nth-child(3) > button:nth-child(1)')
 
     await page.waitForTimeout(10000)
-    await browser.closeAsync()
+    await browser.close()
 })()
 
